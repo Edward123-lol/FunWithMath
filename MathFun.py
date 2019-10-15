@@ -45,7 +45,12 @@ print(acc)
 # Compute the average of the first 100 odd numbers
 # Write a function that returns the average of the first N numbers where N is a parameter
 # Write a function called factorial that computes the product of the first N numbers, where N is a parameter
-# Each number in the Fibbonaci sequence is the sum of the previous two numbers
+# Each number in the Fibonacci sequence is the sum of the previous two numbers
 # The first two numbers in the sequence are 1 in 1. Compute the 18th fibonacci number
-# Write a function to compute the Nth Finonacci number where N is a parameter
+# Write a function to compute the Nth Fibonacci number where N is a parameter
 
+acc = 0
+for val in range(0, 201, 2):
+    acc = acc + val
+
+print(acc)
