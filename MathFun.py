@@ -38,3 +38,14 @@ for val in range(1, 6):
     acc = acc + val
 
 print(acc)
+
+
+# Compute the sum of the first 100 even numbers
+# Compute the sum of the first 50 odd numbers
+# Compute the average of the first 100 odd numbers
+# Write a function that returns the average of the first N numbers where N is a parameter
+# Write a function called factorial that computes the product of the first N numbers, where N is a parameter
+# Each number in the Fibbonaci sequence is the sum of the previous two numbers
+# The first two numbers in the sequence are 1 in 1. Compute the 18th fibonacci number
+# Write a function to compute the Nth Finonacci number where N is a parameter
+
