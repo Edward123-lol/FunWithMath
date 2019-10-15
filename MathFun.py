@@ -30,6 +30,7 @@ for sides in range(8, 100, 8):
 # between the values calculated by the archimedes function and by math.pi.
 # How many sides does it to make the two close.
 
+print(math.pi)
 
 # Accumulators
 
@@ -51,6 +52,12 @@ print(acc)
 
 acc = 0
 for val in range(0, 201, 2):
+    acc = acc + val
+
+print(acc)
+
+acc = 0
+for val in range(0, 101, 2):
     acc = acc + val
 
 print(acc)
