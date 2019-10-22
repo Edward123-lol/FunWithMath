@@ -50,24 +50,6 @@ print(acc)
 # The first two numbers in the sequence are 1 in 1. Compute the 18th fibonacci number
 # Write a function to compute the Nth Fibonacci number where N is a parameter
 
-acc = 0
-for val in range(0, 201, 2):
-    acc = acc + val
-
-print(acc)
-
-acc = 0
-for val in range(0, 101, 2):
-    acc = acc + val
-
-print(acc)
-
-acc = 0
-for val in range(1, 201, 2):
-    acc = acc + val / 100
-
-print(acc)
-
 # here is the sum of the first 100 even numbers
 
 acc = 0
@@ -93,8 +75,124 @@ print(acc)
 
 acc = 0
 for val in range(1, 200, 2):
-acc = acc + val / 100
+    acc = acc + val / 100
 
 print(acc)
 
 # it is 100
+# A Monte Carlo Simulation
+
+# random numbers
+
+import random
+
+print(random.random())
+
+# Boolean Expressions
+# <, <=, >, >=, ==, !=
+# Compound Boolean expressions
+# and, or, not
+
+dogWeight = 25
+print(dogWeight < 25)
+catWeight = 12
+print(dogWeight > 25 or catWeight <= 10)
+print(not catWeight <= 10)
+
+# Decision making skills
+
+alice = 20
+bob = 15
+carol = 25
+ans = 0
+if alice > 20:
+    if bob < 50:
+        ans = 150
+    else:
+        ans = 300
+else:
+    if carol > 500:
+        ans = 200
+    else:
+        ans = 75
+print(ans)
+
+value = 75
+if value > 100:
+    print("bigger than 100")
+elif value > 80:
+    print("bigger than 80")
+elif value > 45:
+    print("bigger than 45")
+else:
+    print("not bigger than much")
+
+# function for the average of N numbers where N is a parameter
+
+def average(N):
+    acc = 0
+    for average in range(0, 37, N):
+        acc = acc + average
+    print(acc/N)
+
+# N = 6, average = 21
+
+# this is a function fot the average of N numbers, N is the parameter
+
+def montePi(numDarts):
+
+    inCircle = 0
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+
+    pi = inCircle / numDarts * 4
+    return pi
+
+print(montePi(10000))
+
+import turtle
+
+def showMontePi(numDarts):
+    scn = turtle.Screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2, -2, 2, 2)
+
+    t.penup()
+    t.goto(-1, 0)
+    t.pendown()
+    t.goto(1, 0)
+
+    t.penup()
+    t.goto(0, 1)
+    t.pendown()
+    t.goto(0, -1)
+
+    inCircle = 0
+    t.penup()
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+        t.goto(x, y)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+            t.color("blue")
+        else:
+            t.color("red")
+
+        t.dot()
+
+    pi = inCircle / numDarts * 4
+    scn.exitonclick()
+    return pi
