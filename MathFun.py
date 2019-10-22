@@ -61,3 +61,40 @@ for val in range(0, 101, 2):
     acc = acc + val
 
 print(acc)
+
+acc = 0
+for val in range(1, 201, 2):
+    acc = acc + val / 100
+
+print(acc)
+
+# here is the sum of the first 100 even numbers
+
+acc = 0
+for val in range(0, 201, 2):
+    acc = acc + val
+
+print(acc)
+
+# It is 10100
+
+
+# average of the first 50 odd numbers
+
+acc = 0
+for val in range(1, 100, 2):
+    acc = acc + val
+
+print(acc)
+
+# It is 2500
+
+# average of the first 100 odd numbers
+
+acc = 0
+for val in range(1, 200, 2):
+acc = acc + val / 100
+
+print(acc)
+
+# it is 100
