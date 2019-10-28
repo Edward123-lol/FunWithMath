@@ -196,3 +196,74 @@ def showMontePi(numDarts):
     pi = inCircle / numDarts * 4
     scn.exitonclick()
     return pi
+import turtle
+a = turtle.Turtle()
+b = turtle.Turtle()
+f = turtle.Turtle()
+
+def showMontePi(numDarts):
+    scn = turtle.Screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2, -2, 2, 2)
+
+    t.penup()
+    t.goto(-1, 0)
+    t.pendown()
+    t.goto(1, 0)
+
+    t.penup()
+    t.goto(0, 1)
+    t.pendown()
+    t.goto(0, -1)
+
+    inCircle = 0
+    t.penup()
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+        t.goto(x, y)
+        f.goto(-x, -y)
+        a.goto(x, -y)
+        b.goto(-x, y)
+        a.penup()
+        f.penup()
+        b.penup()
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+            t.color("blue")
+        else:
+            t.color("red")
+        if distance <= 1:
+            inCircle = inCircle + 1
+            f.color("blue")
+        else:
+            f.color("red")
+        if distance <= 1:
+            inCircle = inCircle + 1
+            a.color("blue")
+        else:
+            a.color("red")
+        if distance <= 1:
+            inCircle = inCircle + 1
+            b.color("blue")
+        else:
+            b.color("red")
+
+        t.dot()
+        a.dot()
+        b.dot()
+        f.dot()
+        a.penup()
+        f.penup()
+        b.penup()
+    pi = inCircle / numDarts * 4
+    scn.exitonclick()
+    return pi
+
+print(showMontePi(100000))
+turtle.exitonclick()
